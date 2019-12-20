@@ -1,3 +1,10 @@
-p {
-    color: red;
+#logo {
+    height: 25%;
+    width: 25%;
+}
+.title {
+    color: #2E3D49;
+}
+.home {
+    margin-top: 10%;
 }

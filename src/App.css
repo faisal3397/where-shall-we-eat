@@ -1,4 +1,23 @@
-.App {
+.content {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  width: 50%;
+  height: 100%;
+  left: 27%;
   text-align: center;
-  background-image: url();
 }
+
+.background-image {
+  position: absolute;
+  background-image: url('https://img.pngio.com/food-background-images-94-images-in-co-381169-png-images-pngio-food-png-background-1440_619.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
