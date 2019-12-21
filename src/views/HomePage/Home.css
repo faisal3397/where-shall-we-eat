@@ -1,10 +1,14 @@
 #logo {
     height: 25%;
     width: 25%;
+    margin-bottom: 20%;
 }
+
 .title {
     color: #2E3D49;
 }
+
+
 .home {
     margin-top: 10%;
 }
