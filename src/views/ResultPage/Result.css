@@ -1,0 +1,44 @@
+.name {
+    color: #067d9e;
+}
+
+#map {
+	position:absolute;
+    left:0; 
+    right:0;
+    top: 20%; 
+    bottom: 10%;
+    margin:auto;
+}
+
+.title {
+    color: #2E3D49;
+}
+
+.result-data {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#suggest-btn {
+    position:absolute;
+    left:0; 
+    right:0;
+    bottom: 10%;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 1000px) {
+    #map {
+        top: 25%; 
+    }
+
+    #suggest-btn {
+        position:absolute;
+        left:0; 
+        right:0;
+        bottom: 5%;
+    }
+}

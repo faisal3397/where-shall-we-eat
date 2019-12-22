@@ -1,7 +1,6 @@
-import React from 'react';
-import './Home.css';
-import { useHistory } from "react-router-dom";
-import { Button, Typography, makeStyles } from '@material-ui/core';
+import React from 'react'
+import './Home.css'
+import { Button, Typography, makeStyles, CircularProgress } from '@material-ui/core'
 import logo from '../../asset/logo3.png'
 
 const useStyles = makeStyles({
@@ -9,33 +8,26 @@ const useStyles = makeStyles({
     backgroundColor: '#03B3E4',
     color: 'white',
     width: '50%'
-  } 
+  } ,
+  progress: {
+    color: 'white'
+  }
 })
 
-const fetchSuggestion = (pos) => {
-  let latitude = pos.coords.latitude
-  let longitude = pos.coords.longitude
-  let uid = `${latitude},${longitude}`
-  console.log(uid);
-}
-
-const Home = () => {
+const Home = (props) => {
   const classes = useStyles()
-  let history = useHistory()
-
-  const suggest = () => {
-    navigator.geolocation.getCurrentPosition(fetchSuggestion); // get the latitude and longitude then pass it to the function fetchSuggestion()
-    history.push('/result')
-  }
+  const { suggest, loading } = props
 
   return (
       <div className="home">
         <img id="logo" src={logo} alt="logo"/>
-        <Typography className="title" variant="h3" gutterBottom>
-          Where Shall We Eat?
-        </Typography>
+        <div id="title">
+          <Typography variant="h3" gutterBottom>
+            Where Shall We Eat?
+          </Typography>
+        </div>
         <Button variant="contained" className={classes.btn} onClick={suggest}>
-          Suggest
+            {loading ? <CircularProgress className={classes.progress}/> : 'Suggest'}
         </Button>
       </div>
   );

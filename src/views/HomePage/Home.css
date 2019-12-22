@@ -4,11 +4,19 @@
     margin-bottom: 20%;
 }
 
-.title {
+#title {
     color: #2E3D49;
 }
 
 
 .home {
     margin-top: 10%;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 1000px) {
+    #title {
+        margin-top: 10%;
+        margin-bottom: 50%;
+    }
 }
